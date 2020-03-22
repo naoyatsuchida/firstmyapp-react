@@ -23,6 +23,7 @@ const Main =()=>{
     <div className="main">
           {/* サイドーーーー   railsからお気に入り記事データの所得をする*/}
           <div className="said">
+
             <div className="said__box">
               <img className="said-image" src="https://picsum.photos/id/237/200/300"></img>
               <div className="said-content">直也は初めてアプリを作った</div>

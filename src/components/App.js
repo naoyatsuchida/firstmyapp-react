@@ -8,10 +8,13 @@ import axios from 'axios'
 function App() {
 
   const [article, setArticle] = useState([]);
-
+ 
   useEffect(()=>{
-    news();
+    news()
+    
+    
   },[])
+
 
   const news = async() =>{
     const url = 'http://newsapi.org/v2/top-headlines?country=jp&category=business&apiKey=e50c1e192d364a2a8f35150d178f8df8'

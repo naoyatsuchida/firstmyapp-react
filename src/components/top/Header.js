@@ -9,7 +9,7 @@ const Head =()=>{
 <header className="header">
 
 
-<span className="header__title">外部APIを叩いてニュースを表示するアプリ(仮)</span>
+<p className="header__title">外部APIを叩いてニュースを表示するアプリ(仮)</p>
      
 <div className="header__nab">
   <button className="sign_up">新規登録</button>
