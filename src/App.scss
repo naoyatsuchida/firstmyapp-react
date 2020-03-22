@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+.wrapper {
+  margin: 0;
+  background-color: #fff;
+  height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+// ###############hedda---""""""""""
+.header {
+  background-color: #e7f7fd;
   display: flex;
-  flex-direction: column;
+  height: 60px;
+  justify-content: space-between;
+  position: relative;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+  &__title{
+    font-size: 1.5em;
+    margin-left: 160px;
+    display: inline-block;
+    font-weight: bold;  
+  }
+  &__nab{
+   margin-right: 20px;
+   .sign_up{
+    border-radius: 100px;
+  }
+  .log_in{
+    border-radius: 100px;
+    margin-left: 10px;
+   }
+  }
+
+}
+.main{
+  height: 100vh;
+  display: flex;
+}
+.said{
+  border: 1px solid black;
+  height: 100%;
+  width: 250px;
+  border-radius: 15px;
+  overflow: scroll;
+  &__box{
+    display: flex;
+    height: 60px;
+    border: 1px solid black;
+    margin-bottom: 2px;
+    border-radius: 15px;
+    .said-image{
+      height: 100%;
+      width: 25%;
+      border-radius: 15px;
+    }
+    .said-content{
+      font-size: 15px;
+      padding: 5px;
+    }
+
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.content{
+  width: 800px;
+  border: 1px solid black;
+  border-radius: 15px;
+  height: 100%;
+  overflow: scroll;
+  .contents{
+    height: 150px;
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    &__image{
+      height: 150px;
+      width: 150px;
+      border-radius: 15px;  
+    }
+    &__body{
+  
+      .title{
+        margin-left: 10px;
+      }
+      .body{
+        margin-left: 5px;
+        word-wrap: break-word;
+        overflow: hidden;
+        font-size: small;
+      }
+      
+    }
+  }
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tako{
+  height: 150px;
+  width: 150px;
+  border-radius: 15px;
+}
+
+.api{
+  width: 200px;
+  margin: 0 auto;
 }
