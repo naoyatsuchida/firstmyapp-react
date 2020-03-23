@@ -11,8 +11,8 @@ const Head =()=>{
 <p className="header__title">外部APIを叩いてニュースを表示するアプリ(仮)</p>
      
 <div className="header__nab">
-  <Link to=''className="sign_up">新規登録</Link>
-  <Link to=''className="log_in">ログイン</Link>
+  <Link to='../rogin/Signup'className="sign_up">新規登録</Link>
+  <Link to='../rogin/Signin'className="log_in">ログイン</Link>
 </div>
           
        
