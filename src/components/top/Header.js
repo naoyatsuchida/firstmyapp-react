@@ -1,6 +1,5 @@
 import React ,{useState,useEffect}from 'react';
-
-
+import {Link} from 'react-router-dom'
 
 
 const Head =()=>{
@@ -12,8 +11,8 @@ const Head =()=>{
 <p className="header__title">外部APIを叩いてニュースを表示するアプリ(仮)</p>
      
 <div className="header__nab">
-  <button className="sign_up">新規登録</button>
-  <button className="log_in">ログイン</button>
+  <Link to=''className="sign_up">新規登録</Link>
+  <Link to=''className="log_in">ログイン</Link>
 </div>
           
        
