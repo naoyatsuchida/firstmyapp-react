@@ -8,6 +8,11 @@ import { BrowserRouter,Route,Switch} from 'react-router-dom'
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <Switch>
+        <Route exact path='/' exact component={App}/>
+        <Route path='./rogin/Signup' exact component={Signup}/>
+        <Route path='./rogin/Signin' exact component={Signin}/>
+      </Switch>
     <App />
     </BrowserRouter>
   </React.StrictMode>,
