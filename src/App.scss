@@ -10,6 +10,12 @@
   height: 60px;
   align-items: center;
   position: relative;
+  .LINK{
+    width: 530px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: black;
+  }
   
   &__title{
     font-size: 1.5em;
