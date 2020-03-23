@@ -12,8 +12,8 @@ const Head =()=>{
 </Link>
      
 <div className="header__nab">
-  <Link to='../rogin/Signup'className="sign_up">新規登録</Link>
-  <Link to='../rogin/Signin'className="log_in">ログイン</Link>
+  <Link to='signup'className="sign_up">新規登録</Link>
+  <Link to='signin'className="log_in">ログイン</Link>
 </div>
           
        

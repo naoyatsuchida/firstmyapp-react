@@ -7,7 +7,7 @@ const Signun = () =>{
     <div>
       新規登録
     </div>
-  )
+  );
 
 
 }

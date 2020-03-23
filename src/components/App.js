@@ -26,12 +26,14 @@ function App() {
       console.error(error);
     }
   }
-  console.log(article)
+
+
 
 
 
 
   return (
+
     <AppContext.Provider value={{article}}>
 
       <div className='wrapper'>

@@ -1,8 +1,16 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
+
 
 const Kizi =({title, image, body})=>{
+  
+  
   return (
-    <>
+    
+    
+  
+    <Link to="memo" className="kizi-link" >
      <div className="contents">
               <div className="tako">
               <img className="contents__image" src={image}></img>
@@ -14,7 +22,10 @@ const Kizi =({title, image, body})=>{
               </div>
 
             </div>
-    </>
+    </Link>
+ 
+    
+  
   )
 }
 
