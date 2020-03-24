@@ -1,12 +1,15 @@
 import React from 'react'
-
+import Head from './head'
+ 
 const Signin = () =>{
 
 
   return(
-    <div>
-      ログイン
-    </div>
+    
+      <>
+         <Head/>
+      </>
+    
   )
 
 

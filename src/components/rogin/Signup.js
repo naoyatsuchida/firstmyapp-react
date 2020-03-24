@@ -1,12 +1,17 @@
 import React from 'react'
+import Head from './head'
 
 const Signun = () =>{
 
 
   return(
-    <div>
-      新規登録
-    </div>
+    <>
+       <Head/>
+
+
+
+    
+    </>
   );
 
 
