@@ -41,7 +41,7 @@ function App() {
         <Head/>
         <Main/>
       
-        <p　className="api">外部apiの索引を春</p>
+        <a　className="api" href="https://newsapi.org/" target="_blank">&copy;News API : https://newsapi.org/</a>
       </div>
     
     </AppContext.Provider>

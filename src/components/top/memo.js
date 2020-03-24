@@ -28,7 +28,6 @@ a.append(b.textContent);
 }
 
 
-
 const deletehtml = ()=>{
 a.textContent = '';
 b.value ='';
