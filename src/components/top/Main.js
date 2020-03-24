@@ -2,16 +2,21 @@ import React, { useContext } from "react";
 import Kizi from "./Kizi";
 import AppContext from "../../context/AppContext";
 
+
 const Main = () => {
   const { article } = useContext(AppContext);
+  
 
   const item = article.map((art, index) => {
+    
     return (
       <Kizi
+        
         title={art.title}
         image={art.urlToImage}
         body={art.description}
         key={index}
+        
       />
     );
   });
@@ -28,9 +33,9 @@ const Main = () => {
           <div className="said-content">直也は初めてアプリを作った</div>
         </div>
       </div>
-      {/* 　　　　　　　　　メインコンテンツーーーー */}
+      {/* ------------メインコンテンツーーーー */}
       <div className="content">{item}</div>
-
+{/* ================右の箱＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */}
       <div className="right">
         <div className="right__box">
           <img

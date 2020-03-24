@@ -1,6 +1,6 @@
 import React ,{useState,useEffect}from 'react';
 import AppContext from '../context/AppContext'
-import '../App.scss';
+import '../scss/App.scss';
 import Head from './top/Header'
 import Main from './top/Main'
 import axios from 'axios'
@@ -26,12 +26,14 @@ function App() {
       console.error(error);
     }
   }
-  console.log(article)
+
+
 
 
 
 
   return (
+
     <AppContext.Provider value={{article}}>
 
       <div className='wrapper'>

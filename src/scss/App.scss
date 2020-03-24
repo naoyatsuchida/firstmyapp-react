@@ -10,6 +10,12 @@
   height: 60px;
   align-items: center;
   position: relative;
+  .LINK{
+    width: 530px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: black;
+  }
   
   &__title{
     font-size: 1.5em;
@@ -73,6 +79,10 @@
   border-radius: 15px;
   height: 100%;
   overflow: scroll;
+  .kizi-link{
+    text-decoration: none;
+    color: black;
+  }
   .contents{
     height: 150px;
     border: 1px solid black;
