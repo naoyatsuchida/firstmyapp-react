@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
 import Kizi from "./Kizi";
 import AppContext from "../../context/AppContext";
+import Side from './Side.js'
 
 
 const Main = () => {
-  const { article } = useContext(AppContext);
-  
+  const { article,memos } = useContext(AppContext);
 
   const item = article.map((art, index) => {
-    
     return (
       <Kizi
         
@@ -21,17 +20,33 @@ const Main = () => {
     );
   });
 
+ 
+  
+  
+  
+  
+  
+  
+  // ###########################実験室　”””””””””””””””””””””””
+  
+  // const rail = memos.data.map((memo,index) =>{
+  //   return (
+  //     <Side 
+  //     title={memo.title}
+  //     image={memo.image}
+  //     body={memo.body}
+  //     memo={memo.memo}
+  //     key={index}
+  //     />
+  //   )
+  // })
+
   return (
     <div className="main">
       {/* サイドーーーー   railsからお気に入り記事データの所得をする*/}
       <div className="said">
-        <div className="said__box">
-          <img
-            className="said-image"
-            src="https://picsum.photos/id/237/200/300"
-          ></img>
-          <div className="said-content">直也は初めてアプリを作った</div>
-        </div>
+        <Side />
+        
       </div>
       {/* ------------メインコンテンツーーーー */}
       <div className="content">{item}</div>

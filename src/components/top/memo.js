@@ -22,7 +22,7 @@ let b = document.getElementById('form__memo');
 let a = document.getElementById('memoarea');
 
 const addevent =()=>{
-
+a.textContent='';
 a.append(b.textContent);
 
 }
