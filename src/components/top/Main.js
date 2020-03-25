@@ -19,33 +19,25 @@ const Main = () => {
       />
     );
   });
-
- 
   
   
-  
-  
-  
-  
-  // ###########################実験室　”””””””””””””””””””””””
-  
-  // const rail = memos.data.map((memo,index) =>{
-  //   return (
-  //     <Side 
-  //     title={memo.title}
-  //     image={memo.image}
-  //     body={memo.body}
-  //     memo={memo.memo}
-  //     key={index}
-  //     />
-  //   )
-  // })
+  const rail = memos.data.map((memo,index) =>{
+    return (
+      <Side 
+      title={memo.title}
+      image={memo.image}
+      body={memo.body}
+      memo={memo.memo}
+      key={index}
+      />
+    )
+  })
 
   return (
     <div className="main">
       {/* サイドーーーー   railsからお気に入り記事データの所得をする*/}
       <div className="said">
-        <Side />
+        {rail}
         
       </div>
       {/* ------------メインコンテンツーーーー */}
