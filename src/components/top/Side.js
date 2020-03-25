@@ -3,7 +3,7 @@ import React from 'react'
 
 
 const Side =({title,image})=>{
-  const damy = 'http://placehold.jp/150x150.png'
+
   return(
       <div className="said__box">
         {!image && <img
