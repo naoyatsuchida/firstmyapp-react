@@ -21,7 +21,9 @@ function App() {
     const url = 'http://newsapi.org/v2/top-headlines?country=jp&category=business&apiKey=e50c1e192d364a2a8f35150d178f8df8'
     try {
       const response = await axios.get(url);
+      console.log(response)
       setArticle(response.data.articles)
+      console.log(response.data.articles)
     } catch (error) {
       console.error(error);
     }
@@ -32,14 +34,16 @@ function App() {
     const memourl = 'http://localhost:3001/memos'
     try {
       const respons = await axios.get(memourl);
+      console.log(respons)
       setMemos(respons.data.data);
+      console.log(respons.data.data)
       
     } catch (error) {
       console.error(error);
     }
     }
   
-   
+  
 
 
 
@@ -47,7 +51,7 @@ function App() {
 
   return (
 
-    <AppContext.Provider value={{article}}>
+    <AppContext.Provider value={{article,memos}}>
 
       <div className='wrapper'>
     

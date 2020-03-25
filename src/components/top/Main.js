@@ -21,7 +21,7 @@ const Main = () => {
   });
   
   
-  const rail = memos.data.map((memo,index) =>{
+  const rail = memos.map((memo,index) =>{
     return (
       <Side 
       title={memo.title}
@@ -30,7 +30,7 @@ const Main = () => {
       memo={memo.memo}
       key={index}
       />
-    )
+    );
   })
 
   return (

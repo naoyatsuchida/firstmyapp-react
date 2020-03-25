@@ -8,9 +8,9 @@ const Side =({title,image})=>{
       <div className="said__box">
          <img
             className="said-image"
-            src={this.props.memo.image}
+            src={image}
           ></img>
-        <div className="said-content">{memo.title}</div>
+        <div className="said-content">{title}</div>
       </div>
     );
   }
