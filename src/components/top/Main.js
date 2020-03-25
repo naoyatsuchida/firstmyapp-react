@@ -27,7 +27,7 @@ const Main = () => {
       title={memo.title}
       image={memo.image}
       body={memo.body}
-      memo={memo.memo}
+      memo={memo.memomemo}
       key={index}
       />
     );

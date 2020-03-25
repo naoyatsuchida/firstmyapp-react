@@ -23,7 +23,7 @@ function App() {
       const response = await axios.get(url);
       console.log(response)
       setArticle(response.data.articles)
-      console.log(response.data.articles)
+      
     } catch (error) {
       console.error(error);
     }
@@ -36,7 +36,7 @@ function App() {
       const respons = await axios.get(memourl);
       console.log(respons)
       setMemos(respons.data.data);
-      console.log(respons.data.data)
+      
       
     } catch (error) {
       console.error(error);
