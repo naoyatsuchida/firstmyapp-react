@@ -1,29 +1,71 @@
 .wra {
-  margin: 0 auto;
+  margin: 0;
+  
+}
+.ma__content{
   width: 800px;
-
+  margin: 0 auto;
   border: 2px double #87ceeb ;
   display: flex;
 }
-
 .ma{
   width: 50%;
   display: flex;
   flex-direction: column;
-  
+  border: double skyblue;
   &__title{
   font-weight: bold;
   }
   &__image{
-    width: 100%;
-    height: 300px;
+    width: 90%;
+    height: 200px;
     border-radius: 10px;
+    margin: 0 auto;
   }
-  &__content{
+  &__body{
     padding: 10px;
     line-height: 30px;
+    overflow: scroll;
+    
   }
-}
 
+  
+}
+    .memo{
+      width: 400px;
+      &__title{
+        padding-left: 10px;
+      }
+      .tarako{
+        padding: 10px;
+      }
+      &__area{
+        
+        width: 100%;
+        word-wrap: break-word;
+        
+      }
+}
+.koko{
+  display: flex;
+  width:800px;
+  margin: 0 auto;
+
+}
+.form{
+  display: block;
+  
+    .form__memo{
+      width: 700px;
+      height: 200px;
+      resize: none;
+      font-size: 1.3em;
+    }
+  }
+
+.api{
+  display: block;
+  margin: 50px auto;
+}
 
 
