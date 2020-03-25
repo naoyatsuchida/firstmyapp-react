@@ -8,10 +8,11 @@ import axios from 'axios'
 function App() {
 
   const [article, setArticle] = useState([]);
+  const [memos, setMemos] = useState([]);
  
   useEffect(()=>{
-    news()
-    
+    news();
+    rails();
     
   },[])
 
@@ -21,12 +22,24 @@ function App() {
     try {
       const response = await axios.get(url);
       setArticle(response.data.articles)
-      console.log(response);
     } catch (error) {
       console.error(error);
     }
   }
 
+
+  const rails = async()=>{
+    const memourl = 'http://localhost:3001/memos'
+    try {
+      const respons = await axios.get(memourl);
+      setMemos(respons.data.data);
+      
+    } catch (error) {
+      console.error(error);
+    }
+    }
+  
+   
 
 
 
