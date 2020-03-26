@@ -1,11 +1,15 @@
+$back-color: skyblue;
+
+
 .wrapper {
   margin: 0;
-  background-color: #fff;
   height: 100vh;
+  
 }
+
 // ###############hedda---""""""""""
 .header {
-  background-color: #e7f7fd;
+  background-color: $back-color;
   display: flex;
   height: 60px;
   align-items: center;
@@ -40,13 +44,20 @@
 .main{
   height: 100vh;
   display: flex;
+  background-color: $back-color;
 }
 .said{
-  border: 1px solid black;
+  
   height: 100%;
   width: 300px;
-  border-radius: 15px;
+
   overflow: scroll;
+  text-align: center;
+  background-color:$back-color;
+  &__title{
+    width: 200px;
+    color: white;
+  }
   &__box{
     display: flex;
     height: 60px;
@@ -80,6 +91,7 @@
   border-radius: 15px;
   height: 100%;
   overflow: scroll;
+  background-color: white;
   .kizi-link{
     text-decoration: none;
     color: black;
@@ -115,7 +127,7 @@
 }
 
 .right{
-  border: 1px solid black;
+ 
   height: 100%;
   width: 300px;
   border-radius: 15px;
@@ -129,6 +141,7 @@
     cursor: pointer;
     transition: transform 1s;
     margin: 10px;
+    overflow: hidden;
     &:hover {
       transform: scale(1,1.3);
 
@@ -156,12 +169,15 @@
   width: 150px;
   border-radius: 15px;
 }
-
-.api{
+.footer{
+  height: 50px;
+  background-color: $back-color;
+&__api{
   width: 300px;
+  line-height: 50px;
   margin: 0 auto;
   display: block;
   text-decoration: none;
   color: black;
-
+}
 }

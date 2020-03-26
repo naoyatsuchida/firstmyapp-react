@@ -2,59 +2,71 @@ import React,{useState,useEffect} from 'react'
 import {useLocation} from 'react-router-dom'
 import Header from './Header'
 import '../../scss/memo.scss'
-import update from 'react-addons-update';
+import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 
 const Memo = () =>{
+  const history = useHistory()
+  const [article, setArticle] = useState('')
+  const [memo, setMemo] = useState('')
+  const ur = "http://localhost:3001/memos"
+  const data = {
+          id:article.id,
+          title:article.title,
+          image:article.image,
+          body:article.body,
+          memomemo:memo};
+  const location = useLocation(); //クエリから情報を所得するために必要
+  const root =()=>{ history.push({pathname:'/'})} //トップページへの遷移
 
-const [article, setArticle] = useState('')
-const [memo, setMemo] = useState('')
+  //画面表示のタイミングで呼び出し　
+  useEffect(()=>{
+  const  art = location.state.atai
+  setArticle(art)
+  },[])
 
-const location = useLocation(); //クエリから情報を所得するために必要
-useEffect(()=>{
-const  art = location.state.atai
-setArticle(art)
-
-},[])
-console.log(article.memomemo)
-
-////////railsのポストに指定している
-const data = {
-title:article.title,
-image:article.image,
-body:article.body,
-memomemo:memo};
-
-
-
-////////////////railsにデータをポスト
-const handlesubmit = async() =>{
-  const ur = "http://localhost:3001/memos";
-  await axios.post(ur, data)
-  .then((res) => {
-    console.log('memo',res.data)
-  });
-}
-////////////////railsにデータをポスト
+  ////////////////エイジャックス エンター入力
+  let a = document.getElementById('memoarea');
+  let b = document.getElementById('form__memo');
+  const addevent =()=>{
+    a.textContent='';
+    a.append(b.textContent);
+  }
 
 
-////////////////エイジャックス エンター入力
-let a = document.getElementById('memoarea');
-let b = document.getElementById('form__memo');
-const addevent =()=>{
-  a.textContent='';
-  a.append(b.textContent);
-}
-////////////////エイジャックス エンター入力
 
-/////////////更新/////////////////
-const updatehandle=()=>{
+  ////////////////保存
+  const handlesubmit = async() =>{
+    await axios.post(ur, data)
+    .then((res) => {
+      console.log('memo',res.data)
+      root()
+    });
+  }
 
-}
 
-const deletehandle =()=>{
+  /////////////更新/////////////////
+  const updatehandle=async({data})=>{
 
-}
+  setMemo()
+  await axios.patch(`http://localhost:3001/memos/${data.id}`, {memo: data})
+  .then((res) =>{console.log(res)});
+  const respons = await axios.get(ur); //消したデータをすぐに呼び出して表示させている
+  console.log(respons)
+  setMemo(respons.data.data)
+  root()
+  }
+
+  /////////////削除/////////////////
+  const deletehandle =async({data})=>{
+    window.confirm('データを削除しますか？');
+    await  axios.delete(`http://localhost:3001/memos/${data.id}`)
+    .then((res) => {console.log(res)});
+    const respons = await axios.get(ur); //消したデータをすぐに呼び出して表示させている
+    console.log(respons)
+    setMemo(respons.data.data);
+    root()
+  }
 
 
 
@@ -84,15 +96,21 @@ const deletehandle =()=>{
           <form className="form">
             <div className="form__box">
               <label htmlFor="form__memo"></label>
-              <textarea id="form__memo" className="form__memo" type="memomemo" value={memo} onChange={(e)=>setMemo(e.target.value) } placeholder="ここに入力してください"></textarea>
+           
+              <textarea id="form__memo" className="form__memo" type="memomemo" value={memo}
+               onChange={(e)=>setMemo(e.target.value) } placeholder='ここに入力してください' ></textarea>
+            
+
             </div>
           </form>
+
+          {/* 条件分岐 メモがあったら上なければ下のコードが呼ばれる */}
           {article.memomemo &&(<>
-            <button className="enter" onClick={(updatehandle)}>UPDATE</button>
-            <button className="delete" type="submit" onClick={(deletehandle)}>DELETE</button>
+            <button className="enter" onClick={()=> (updatehandle({data}))}>UPDATE</button>
+            <button className="delete" type="submit" onClick={()=> (deletehandle({data}))}>DELETE</button>
             </>
             )}
-           {!article.memomemo &&( <>
+            {!article.memomemo &&( <>
             <button className="enter" onClick={(addevent)}>ENTER</button>
             <button className="delete" type="submit" onClick={(handlesubmit)}>SAVE</button>
             </>

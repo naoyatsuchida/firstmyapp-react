@@ -57,8 +57,9 @@ function App() {
     
         <Head/>
         <Main/>
-      
-        <a　className="api" href="https://newsapi.org/" target="_blank">&copy;News API : https://newsapi.org/</a>
+      <div className="footer">
+        <a className="footer__api" href="https://newsapi.org/" target="_blank">&copy;News API : https://newsapi.org/</a>
+      </div>
       </div>
     
     </AppContext.Provider>
