@@ -47,6 +47,15 @@ const addevent =()=>{
 }
 ////////////////エイジャックス エンター入力
 
+/////////////更新/////////////////
+const updatehandle=()=>{
+
+}
+
+const deletehandle =()=>{
+
+}
+
 
 
 
@@ -78,10 +87,16 @@ const addevent =()=>{
               <textarea id="form__memo" className="form__memo" type="memomemo" value={memo} onChange={(e)=>setMemo(e.target.value) } placeholder="ここに入力してください"></textarea>
             </div>
           </form>
-          
+          {article.memomemo &&(<>
+            <button className="enter" onClick={(updatehandle)}>UPDATE</button>
+            <button className="delete" type="submit" onClick={(deletehandle)}>DELETE</button>
+            </>
+            )}
+           {!article.memomemo &&( <>
             <button className="enter" onClick={(addevent)}>ENTER</button>
-            <button className="delete" type="submit" onClick={(handlesubmit)}>保存</button>
-
+            <button className="delete" type="submit" onClick={(handlesubmit)}>SAVE</button>
+            </>
+          )}
         </div>
           
 
