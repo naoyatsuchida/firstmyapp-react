@@ -6,17 +6,19 @@ import update from 'react-addons-update';
 import axios from 'axios'
 
 const Memo = () =>{
+
 const [article, setArticle] = useState('')
 const [memo, setMemo] = useState('')
-// const [sousin, setSousin] = useState('')
 
-const location = useLocation(); //クエリから情報を所得する
-
+const location = useLocation(); //クエリから情報を所得するために必要
 useEffect(()=>{
 const  art = location.state.atai
 setArticle(art)
 
 },[])
+console.log(article.memomemo)
+
+////////railsのポストに指定している
 const data = {
 title:article.title,
 image:article.image,
@@ -24,26 +26,26 @@ body:article.body,
 memomemo:memo};
 
 
+
+////////////////railsにデータをポスト
 const handlesubmit = async() =>{
-      const ur = "http://localhost:3001/memos";
-      await axios.post(ur, data)
-      .then((res) => {
-        // const newdata = update(sousin, {$push:[res.data]})
-        // setSousin({sousin: newdata})
-        console.log('memo',res.data)
-      });
+  const ur = "http://localhost:3001/memos";
+  await axios.post(ur, data)
+  .then((res) => {
+    console.log('memo',res.data)
+  });
 }
+////////////////railsにデータをポスト
 
 
-
+////////////////エイジャックス エンター入力
 let a = document.getElementById('memoarea');
 let b = document.getElementById('form__memo');
-
 const addevent =()=>{
-a.textContent='';
-a.append(b.textContent);
-
+  a.textContent='';
+  a.append(b.textContent);
 }
+////////////////エイジャックス エンター入力
 
 
 
@@ -63,7 +65,7 @@ a.append(b.textContent);
             <div className="memo">
               <h3 className="memo__title">memo</h3>
               <div className ="tarako">
-                  <div className="memo__area" id='memoarea' ></div>
+              <div className="memo__area" id='memoarea' >{article.memomemo || ""}</div>  {/* side空飛んできたメモは表示、mainから飛んできたものはnullを表示 */}
               </div>
             </div>
         </div>
