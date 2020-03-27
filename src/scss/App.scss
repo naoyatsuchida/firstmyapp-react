@@ -1,10 +1,10 @@
 $back-color: skyblue;
-
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
 
 .wrapper {
   margin: 0;
   height: 100vh;
-  
+   font-family: 'Noto Serif JP', serif;
 }
 
 // ###############hedda---""""""""""
@@ -24,9 +24,10 @@ $back-color: skyblue;
   &__title{
     font-size: 1.5em;
     width: 530px;
-    display: inline-block;
+ 
     font-weight: bold;  
     margin: 0 auto;
+    font-family: 'Noto Serif JP', serif;
   }
   &__nab{
     position: absolute;
