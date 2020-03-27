@@ -45,7 +45,7 @@ const Main = () => {
       {/* ------------メインコンテンツーーーー */}
       <div className="content">{item}</div>
 {/* ================右の箱＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */}
-      <div className="right">
+      {/* <div className="right">
         <div className="right__box">
           <img
             className="right-image"
@@ -55,7 +55,7 @@ const Main = () => {
             自分も含め多数の人がメモしたランキングが流れる
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

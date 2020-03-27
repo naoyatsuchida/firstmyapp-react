@@ -1,15 +1,16 @@
-$back-color: skyblue;
-
+$back-color: white;
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
 
 .wrapper {
   margin: 0;
   height: 100vh;
-  
+   font-family: 'Noto Serif JP', serif;
+   background-color: rgb(233, 232, 232);
 }
 
 // ###############hedda---""""""""""
 .header {
-  background-color: $back-color;
+  background-color:rgb(75, 70, 70);
   display: flex;
   height: 60px;
   align-items: center;
@@ -24,19 +25,24 @@ $back-color: skyblue;
   &__title{
     font-size: 1.5em;
     width: 530px;
-    display: inline-block;
+    color: white;
     font-weight: bold;  
     margin: 0 auto;
+    font-family: 'Noto Serif JP', serif;
   }
   &__nab{
     position: absolute;
     right: 20px;
-   .sign_up{
-    border-radius: 100px;
-  }
-  .log_in{
-    border-radius: 100px;
-    margin-left: 10px;
+    .sign_up{
+      color: white;
+      border-radius: 100px;
+      text-decoration: none;
+    }
+    .log_in{
+      color: white;
+      text-decoration: none;
+      border-radius: 100px;
+      margin-left: 10px;
    }
   }
 
@@ -56,14 +62,17 @@ $back-color: skyblue;
   background-color:$back-color;
   &__title{
     width: 200px;
-    color: white;
+    height: 50px;
+    color: black;
+    margin: 35px auto 0;
+    font-size: 1.4em;
   }
   &__box{
     display: flex;
     height: 60px;
     border: 1px solid black;
     margin-bottom: 2px;
-    border-radius: 15px;
+   
     overflow: hidden;
     cursor: pointer;
     transition: transform 1s;
@@ -73,9 +82,10 @@ $back-color: skyblue;
 
     }
     .said-image{
-      height: 100%;
-      width: 25%;
-      border-radius: 15px;
+      height: 40px;
+      width: 40px;
+      border-radius: 100px;
+      padding: 10px;
     }
     .said-content{
       font-size: 15px;
@@ -87,7 +97,6 @@ $back-color: skyblue;
 
 .content{
   width: 800px;
-  border: 1px solid black;
   border-radius: 15px;
   height: 100%;
   overflow: scroll;
@@ -101,13 +110,15 @@ $back-color: skyblue;
     border: 1px solid black;
     margin: 10px;
     display: flex;
-    border-radius: 15px;
+    
     overflow: hidden;
     cursor: pointer;
     &__image{
-      height: 150px;
-      width: 150px;
-      border-radius: 15px;  
+      height: 120px;
+      width: 120px;
+      margin: 10px;
+
+      border-radius: 100px;  
     }
     &__body{
   
@@ -171,7 +182,7 @@ $back-color: skyblue;
 }
 .footer{
   height: 50px;
-  background-color: $back-color;
+  
 &__api{
   width: 300px;
   line-height: 50px;
