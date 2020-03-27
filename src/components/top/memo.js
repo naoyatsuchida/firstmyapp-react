@@ -96,17 +96,19 @@ const Memo = () =>{
           <form className="form">
             <div className="form__box">
               <label htmlFor="form__memo"></label>
-           
+          
               <textarea id="form__memo" className="form__memo" type="memomemo" value={memo}
-               onChange={(e)=>setMemo(e.target.value) } placeholder='ここに入力してください' ></textarea>
+              onChange={(e)=>setMemo(e.target.value) } placeholder='ここに入力してください' ></textarea>
             
 
             </div>
           </form>
 
           {/* 条件分岐 メモがあったら上なければ下のコードが呼ばれる */}
-          {article.memomemo &&(<>
+          {article.memomemo &&(<> 
+            {a.textContent && (
             <button className="enter" onClick={()=> (updatehandle({data}))}>UPDATE</button>
+            )}
             <button className="delete" type="submit" onClick={()=> (deletehandle({data}))}>DELETE</button>
             </>
             )}
