@@ -1,5 +1,6 @@
 .wra {
   margin: 0;
+  background-color: rgb(233, 232, 232);
   
 }
 .ma__content{
@@ -7,6 +8,7 @@
   margin: 0 auto;
   border: 0.5px double black ;
   display: flex;
+  background-color: white;
 }
 .ma{
   width: 50%;
@@ -54,7 +56,7 @@
 }
 .form{
   display: block;
-  
+  margin-top: 15px;
     .form__memo{
       width: 700px;
       height: 200px;

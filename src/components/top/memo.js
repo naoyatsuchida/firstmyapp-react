@@ -105,6 +105,7 @@ const Memo = () =>{
           </form>
 
           {/* 条件分岐 メモがあったら上なければ下のコードが呼ばれる */}
+          
           {article.memomemo &&(<> 
             {a.textContent && (
             <button className="enter" onClick={()=> (updatehandle({data}))}>UPDATE</button>
