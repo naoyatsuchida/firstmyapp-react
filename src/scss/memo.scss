@@ -4,7 +4,7 @@
   
 }
 .ma__content{
-  width: 800px;
+  width: 900px;
   margin: 0 auto;
   border: 0.5px double black ;
   display: flex;
@@ -15,8 +15,10 @@
   display: flex;
   flex-direction: column;
   border: 0.5px solid black;
+
   &__title{
   font-weight: bold;
+  padding: 10px;
   }
   &__image{
     width: 90%;
@@ -50,7 +52,7 @@
 }
 .koko{
   display: flex;
-  width:800px;
+  width:900px;
   margin: 0 auto;
 
 }
@@ -70,4 +72,14 @@
   margin: 50px auto;
 }
 
+.enter {
+  width: 100px;
+  height: 205px;
+  margin-top: 15px;
+}
+.delete {
+  height: 205px;
+  margin-top: 15px;
+  width: 100px;
+}
 
