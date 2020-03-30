@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from './head'
 
-const Signun = () =>{
+const Signup = () =>{
 
 
   return(
@@ -17,4 +17,4 @@ const Signun = () =>{
 
 }
 
-export default Signun
+export default Signup
