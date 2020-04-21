@@ -15,6 +15,11 @@
 ##使い方
 サーバーの起動
 https://github.com/naoyatsuchida/with_firstmyapp.git  
+
+*git clone https://github.com/naoyatsuchida/with_firstmyapp.git
+
+*cd with_firstmyapp
+
 *rails s -p 3001　でサーバーの立ち上げ
 
 *yarn start
