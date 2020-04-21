@@ -11,7 +11,3 @@ https://gyazo.com/63f322cd1ce8932583ef40d3b63c5d72
 
 ##使い方  
 
-
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splittingし
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
