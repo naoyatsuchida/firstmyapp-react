@@ -8,7 +8,7 @@ const Head =()=>{
 <header className="header">
 
 <Link to="/" className="LINK" >
-<p className="header__title">外部APIを叩いてニュースを表示するアプリ(仮)</p>
+<p className="header__title">nwes picks</p>
 </Link>
      
 <div className="header__nab">

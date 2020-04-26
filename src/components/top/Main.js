@@ -44,18 +44,7 @@ const Main = () => {
       </div>
       {/* ------------メインコンテンツーーーー */}
       <div className="content">{item}</div>
-{/* ================右の箱＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */}
-      {/* <div className="right">
-        <div className="right__box">
-          <img
-            className="right-image"
-            src="https://picsum.photos/id/237/200/300"
-          ></img>
-          <div className="right-content">
-            自分も含め多数の人がメモしたランキングが流れる
-          </div>
-        </div>
-      </div> */}
+
     </div>
   );
 };
