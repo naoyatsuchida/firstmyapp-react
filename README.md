@@ -25,18 +25,6 @@ https://github.com/naoyatsuchida/with_firstmyapp.git
 ## 詳細  
 サーバーをrails apiモード　フロントをreactで作成しています  
 
-このアプリは非常にシンプルな機能しか備えていません。  
-外部APIからニュース情報を所得、表示して任意のニュースにメモを残すことができます　
-そして残したメモの基本的なcrud操作を実装しています  
-
-
-
-## 開発環境  
-・react  
-・rails api 
-・react hooks 
-・axios
-・VSCode (Visual Stadio Code)  
 
 
 
