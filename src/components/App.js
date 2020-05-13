@@ -18,7 +18,7 @@ function App() {
 
 
   const news = async() =>{
-    const url = 'http://newsapi.org/v2/top-headlines?country=jp&category=business&apiKey=e50c1e192d364a2a8f35150d178f8df8'
+    const url = 'https://newsapi.org/v2/top-headlines?country=jp&category=business&apiKey=e50c1e192d364a2a8f35150d178f8df8'
     try {
       const response = await axios.get(url);
       console.log(response)
