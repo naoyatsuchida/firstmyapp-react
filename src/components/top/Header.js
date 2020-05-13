@@ -11,10 +11,7 @@ const Head =()=>{
 <p className="header__title">nwes picks</p>
 </Link>
      
-<div className="header__nab">
-  <Link to='signup'className="sign_up">😄</Link>
-  <Link to='signin'className="log_in">🔑</Link>
-</div>
+
           
        
 

@@ -9,7 +9,7 @@ const Memo = () =>{
   const history = useHistory()
   const [article, setArticle] = useState('')
   const [memo, setMemo] = useState('')
-  const ur = "http://localhost:3001/memos"
+  const ur = "https://with-firstmyapp.herokuapp.com/memos"
   const data = {
           id:article.id,
           title:article.title,
@@ -49,7 +49,7 @@ const Memo = () =>{
   const updatehandle=async({data})=>{
 
   setMemo()
-  await axios.patch(`http://localhost:3001/memos/${data.id}`, {memo: data})
+  await axios.patch(`https://with-firstmyapp.herokuapp.com/memos/${data.id}`, {memo: data})
   .then((res) =>{console.log(res)});
   const respons = await axios.get(ur); //消したデータをすぐに呼び出して表示させている
   console.log(respons)
@@ -60,7 +60,7 @@ const Memo = () =>{
   /////////////削除/////////////////
   const deletehandle =async({data})=>{
     window.confirm('データを削除しますか？');
-    await  axios.delete(`http://localhost:3001/memos/${data.id}`)
+    await  axios.delete(`https://with-firstmyapp.herokuapp.com/memos/${data.id}`)
     .then((res) => {console.log(res)});
     const respons = await axios.get(ur); //消したデータをすぐに呼び出して表示させている
     console.log(respons)
