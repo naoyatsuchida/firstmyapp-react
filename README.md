@@ -1,20 +1,12 @@
 # アプリ名　new picks
+<a href='https://firstmyapp-react.herokuapp.com/'>herokuにてデプロ</a>
 
 ### 使い方
-サーバーの起動
-https://github.com/naoyatsuchida/with_firstmyapp.git  
+一覧で表示されている気になるニュース記事をクリックしてください
 
-*git clone https://github.com/naoyatsuchida/with_firstmyapp.git
+そのニュースにをける奇譚なき思いをメモしてください
 
-*cd with_firstmyapp
-
-*rails s -p 3001　でサーバーの立ち上げ
-
-*yarn instal
-
-*npm install
-
-*yarn start
+メモしたニュースはrailsにてデータ管理し、crud操作を行うことができます
 
 ##＃作ったきっかけ  
 日経新聞の記事をまとめてレポートを作成する。と言うことを前職で行っていた際に  
@@ -23,9 +15,14 @@ https://github.com/naoyatsuchida/with_firstmyapp.git
 
 
 ## 詳細  
-サーバーをrails apiモード　フロントをreactで作成しています  
+サーバーをrails apiモード　フロントをreactで作成しています.
 
-
+## 環境　
+react (create-react-app)
+axios
+hooks
+rails api 5.2.4.2
+visual studio code
 
 
 
