@@ -9,7 +9,7 @@ const Memo = () =>{
   const history = useHistory()
   const [article, setArticle] = useState('')
   const [memo, setMemo] = useState('')
-  const ur = "https://with-firstmyapp.herokuapp.com/memos"
+  const ur = "https://with-firstmyapp.herokuapp.com/memos/"
   const data = {
           id:article.id,
           title:article.title,
