@@ -31,7 +31,7 @@ function App() {
 
 
   const rails = async()=>{
-    const memourl = 'https://with-firstmyapp.herokuapp.com/memos'
+    const memourl = 'https://with-firstmyapp.herokuapp.com/'
     try {
       const respons = await axios.get(memourl);
       console.log(respons)
