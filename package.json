@@ -5,7 +5,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "cra-template": "1.0.3",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.9.0",
     "react-addons-update": "^15.6.2",
     "react-dom": "^16.9.0",
